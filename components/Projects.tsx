@@ -11,7 +11,7 @@ const projects: Project[] = [
     num: "01",
     name: "Arken-AI",
     description:
-      "Natural language heat exchanger design powered by a 16-step AI pipeline with real-time SSE streaming. Engineering-grade output from plain English input.",
+      "16-step deterministic pipeline that turns natural language into engineering-grade heat exchanger designs - AI review at each step, real-time SSE streaming, agentic loops, and Anthropic API integration with rate limiting, retry logic, and connection pooling.",
     tags: ["AI Pipeline", "LLM", "SSE", "Python"],
     href: "https://github.com/Arken-AI",
   },

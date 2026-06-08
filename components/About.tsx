@@ -16,34 +16,41 @@ export default function About() {
             <h2>About me</h2>
             <p>
               I&apos;m a Senior Software Engineer at <strong>John Deere</strong>,
-              where I design and ship AI agent systems that fundamentally change
-              how engineering teams operate. My work sits at the intersection of{" "}
-              <strong>LLMs, backend systems,</strong> and real-world product
-              delivery.
+              where I build systems software in <strong>C++</strong> - real-time
+              protocol stacks, connection lifecycle state machines, and
+              large-scale embedded platforms running in production on
+              agricultural hardware.
             </p>
             <p>
-              I built a <strong>12-agent AI system</strong> covering the full
-              SDLC - from epic creation to code review and infrastructure docs -
-              deployed across 3–4 teams. Engineers shifted from writing to{" "}
-              <em>directing and validating</em>. One product owner in Germany:{" "}
-              <em>&quot;I am blown away by what you have developed.&quot;</em>
+              My focus is <strong>distributed systems and reliability</strong>:
+              a CAN bus message parser decoding J1939/ISOBUS frames at up to{" "}
+              <strong>1,000 Hz</strong> with sub-millisecond latency,
+              multi-path failover across CAN/FTP/MQTT, and a health monitoring
+              system with sub-second heartbeat polling and a{" "}
+              <strong>&lt;0.1% false positive rate</strong>.
+            </p>
+            <p>
+              I also built <strong>Plant Brain</strong>, a production RAG
+              platform that uses <strong>PostgreSQL as an ACID-compliant
+              append-only audit log</strong> - which pulled me deeper into
+              databases. I&apos;m now studying <strong>TimescaleDB</strong>{" "}
+              internals: hypertable architecture, compression, and how
+              time-series engines extend Postgres at scale. Genuinely
+              interested in moving from systems that use databases to systems
+              that build them.
             </p>
             <p>
               Before Deere, I spent 2+ years at <strong>Mavenir</strong>{" "}
-              building Go microservices for telecom-grade analytics -
-              high-frequency polling, concurrent goroutines, OpenAPI refactors
-              on live distributed systems.
-            </p>
-            <p>
-              Outside of code: exploring new architectures, reading about
-              distributed systems, and occasionally writing on Medium about
-              things I&apos;ve figured out the hard way.
+              building Go microservices on <strong>SingleStore</strong> for
+              telecom-grade analytics - high-frequency polling, concurrent
+              goroutines, and distributed data storage in a production,
+              Kubernetes-based environment.
             </p>
             <div className="about-chips">
               <span className="chip">Pune, India</span>
               <span className="chip">Open to remote</span>
-              <span className="chip">AI Systems</span>
-              <span className="chip">Backend</span>
+              <span className="chip">Systems &amp; C++</span>
+              <span className="chip">Databases</span>
             </div>
           </div>
         </div>

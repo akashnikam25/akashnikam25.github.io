@@ -5,65 +5,61 @@ type SkillGroup = {
 
 const skillGroups: SkillGroup[] = [
   {
-    name: "AI & Agents",
+    name: "Systems Languages",
     tags: [
-      { label: "Agentic AI", highlight: true },
-      { label: "LLMs", highlight: true },
-      { label: "Claude / MCP", highlight: true },
-      { label: "RAG" },
-      { label: "AI Pipelines" },
-      { label: "Prompt Engineering" },
-    ],
-  },
-  {
-    name: "Backend",
-    tags: [
+      { label: "C++14/17", highlight: true },
       { label: "Go", highlight: true },
-      { label: "Python / FastAPI", highlight: true },
-      { label: "gRPC" },
-      { label: "Protocol Buffers" },
-      { label: "REST APIs" },
-      { label: "Microservices" },
+      { label: "Python" },
     ],
   },
   {
-    name: "Frontend",
+    name: "Database",
     tags: [
-      { label: "TypeScript", highlight: true },
-      { label: "React + Vite" },
-      { label: "JavaScript" },
-      { label: "WebRTC" },
-      { label: "SSE / Streaming" },
-    ],
-  },
-  {
-    name: "Databases",
-    tags: [
-      { label: "MongoDB" },
-      { label: "Redis" },
-      { label: "DynamoDB" },
+      { label: "PostgreSQL", highlight: true },
+      { label: "Query Optimisation", highlight: true },
+      { label: "TimescaleDB", highlight: true },
+      { label: "SingleStore" },
       { label: "CouchDB" },
-      { label: "Singlestore" },
+      { label: "MongoDB" },
+      { label: "Qdrant" },
     ],
   },
   {
-    name: "DevOps & Infra",
+    name: "Systems / Embedded",
     tags: [
-      { label: "Docker" },
+      { label: "CAN Bus", highlight: true },
+      { label: "Real-time Systems", highlight: true },
+      { label: "IPC" },
+      { label: "gRPC" },
+      { label: "MQTT" },
+    ],
+  },
+  {
+    name: "Build & Validation",
+    tags: [
+      { label: "CMake" },
+      { label: "x86-64 + ARM Cross-compilation" },
+      { label: "Jenkins CI/CD" },
+      { label: "Google Test/Mock" },
+    ],
+  },
+  {
+    name: "Infrastructure",
+    tags: [
       { label: "Kubernetes" },
-      { label: "Nginx" },
-      { label: "CI/CD" },
+      { label: "Docker" },
+      { label: "AWS" },
+      { label: "AKS" },
       { label: "GitHub Actions" },
     ],
   },
   {
-    name: "Systems",
+    name: "AI & Agents",
     tags: [
-      { label: "C++" },
-      { label: "CAN Bus" },
-      { label: "Real-time Systems" },
-      { label: "Embedded" },
-      { label: "Telemetry" },
+      { label: "Agentic AI" },
+      { label: "LLMs" },
+      { label: "Claude / MCP" },
+      { label: "RAG" },
     ],
   },
 ];

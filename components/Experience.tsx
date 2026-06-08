@@ -7,8 +7,9 @@ export default function Experience() {
             <div className="section-tag">Experience</div>
             <h2 className="section-title">Where I&apos;ve worked</h2>
             <p className="section-sub">
-              5+ years across AI systems, telecom infrastructure, and embedded
-              platforms.
+              5+ years building systems software in C++ and Go - real-time
+              embedded platforms, distributed telecom infrastructure, and
+              database-backed systems.
             </p>
             <a
               href="https://www.linkedin.com/in/akash-nikam-profile/"
@@ -31,29 +32,47 @@ export default function Experience() {
                 <div className="tl-period">Oct 2023 - Present · Pune, Hybrid</div>
                 <ul className="tl-bullets">
                   <li>
-                    Architected a <strong>12-agent AI orchestration platform</strong>{" "}
-                    covering the full SDLC - epic creation, user story writing,
-                    bug triage, code review, and infra docs. Each agent
-                    implements <strong>tool calling patterns</strong>, scanning
-                    the codebase and generating structured output grounded in
-                    the actual code - not generic templates. Deployed across
-                    3–4 engineering teams, cutting engineering time by{" "}
-                    <strong>50–70%</strong>.
+                    Wrote a <strong>CAN bus message parser in C++</strong> -
+                    parsed raw J1939/ISOBUS frames into accurate structured
+                    messages with correct byte ordering, signal extraction,
+                    and timing-sensitive protocol handling for embedded
+                    agricultural hardware running at up to{" "}
+                    <strong>1,000 Hz</strong> at sub-millisecond latency in
+                    production.
                   </li>
                   <li>
-                    Rolled out the agent platform across{" "}
-                    <strong>3–4 engineering teams</strong> through hands-on KT
-                    sessions, integrating directly into existing workflows.
-                    Teams shifted from writing to reviewing and validating
-                    AI-generated output, backed by a structured{" "}
-                    <strong>quality-gate process</strong> to approve results
-                    before adoption.
+                    Designed and built <strong>connection lifecycle state
+                    machines</strong> from scratch in C++ - per-error recovery
+                    paths, sub-second async/non-blocking event processing, and
+                    graceful state transitions under real-time embedded
+                    constraints. Same discipline as database concurrency
+                    control and transaction state management.
                   </li>
                   <li>
-                    Built a real-time <strong>machine visualization UI</strong>{" "}
-                    from scratch using GitHub Copilot - no prior reference on
-                    the platform, delivered <strong>~50% faster</strong> than
-                    the traditional estimate.
+                    Worked across a <strong>large-scale production
+                    C++14/17 codebase</strong> - navigated complex module
+                    dependencies, applied resource management, smart pointer
+                    ownership semantics, and polymorphic interface
+                    hierarchies. Authored <strong>Protocol Buffer schemas
+                    across 50+ .proto files</strong> for a layered data
+                    streaming stack with session management and file transfer
+                    services.
+                  </li>
+                  <li>
+                    Designed <strong>multi-path failover architecture</strong>{" "}
+                    across CAN, FTP, and MQTT - independent health checks per
+                    path, automatic protocol switching on failure. Continuous
+                    data flow with zero manual intervention, even during
+                    partial infrastructure outages.
+                  </li>
+                  <li>
+                    Built a production{" "}
+                    <strong>health monitoring system</strong> with 1-second
+                    heartbeat polling, RTT-based degradation detection
+                    30–60s before failure, and a 150-second field-validated
+                    SLO threshold. Achieved{" "}
+                    <strong>&lt;0.1% false positive rate</strong> and zero
+                    missed disconnects.
                   </li>
                   <li>
                     Architected a billing-critical{" "}
@@ -64,30 +83,6 @@ export default function Experience() {
                     revenue records tied to billing.
                   </li>
                   <li>
-                    Built a production{" "}
-                    <strong>health monitoring system</strong> with 1-second
-                    heartbeat polling, RTT-based degradation detection
-                    30–60s before failure, and a 150-second field-validated
-                    SLO threshold. Achieved{" "}
-                    <strong>&lt;0.1% false positive rate</strong> and zero
-                    missed disconnects - the same SLO-driven observability
-                    pattern used in AI platform services.
-                  </li>
-                  <li>
-                    Designed <strong>multi-path failover architecture</strong>{" "}
-                    across CAN, FTP, and MQTT - independent health checks per
-                    path, automatic protocol switching on failure. Continuous
-                    data flow with zero manual intervention, even during
-                    partial infrastructure outages.
-                  </li>
-                  <li>
-                    Integrated <strong>CAN bus communication</strong> for
-                    automated machine calibration across the ISOBUS stack with
-                    full backward compatibility, processing CAN messages at up
-                    to <strong>1,000 Hz</strong> at sub-millisecond latency in
-                    production.
-                  </li>
-                  <li>
                     Built <strong>distributed M2M collaboration services</strong>{" "}
                     (MQTT pub/sub + protobuf contracts) enabling real-time
                     sharing of coverage maps, session context, and work state
@@ -96,15 +91,25 @@ export default function Experience() {
                     organization.
                   </li>
                   <li>
-                    Building <strong>Plant Brain</strong>: a production RAG
-                    platform for manufacturing SOPs - 3-lane parallel
-                    retrieval (Qdrant hybrid BM25 + dense vector search +
-                    entity graph, fused via RRF), secure multi-tenant
-                    isolation (RBAC scoping, prompt-injection defence,
-                    append-only audit logs), a 50-question eval harness with
-                    cross-model grading (Claude Opus + GPT-4o), and a 6-layer
-                    fallback architecture with zero silent failures. Pilot
-                    live - technicians querying in production.
+                    Built <strong>Plant Brain</strong>, a production RAG
+                    platform that uses <strong>PostgreSQL as an
+                    ACID-compliant append-only audit log</strong> and
+                    full-text fallback layer - 3-lane parallel retrieval
+                    (Qdrant hybrid BM25 + dense vector search + entity graph,
+                    fused via RRF), secure multi-tenant isolation (RBAC
+                    scoping, prompt-injection defence), a 50-question eval
+                    harness with cross-model grading, and a 6-layer fallback
+                    architecture with zero silent failures. Pilot live -
+                    technicians querying in production.
+                  </li>
+                  <li>
+                    Designed and shipped a <strong>12-agent AI orchestration
+                    platform</strong> covering the full SDLC, deployed across
+                    3–4 engineering teams and cutting engineering time by{" "}
+                    <strong>50–70%</strong>. Also built a real-time{" "}
+                    <strong>machine visualization UI</strong> from scratch,
+                    delivered <strong>~50% faster</strong> than the
+                    traditional estimate.
                   </li>
                 </ul>
               </div>
