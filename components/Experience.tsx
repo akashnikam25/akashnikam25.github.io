@@ -7,9 +7,8 @@ export default function Experience() {
             <div className="section-tag">Experience</div>
             <h2 className="section-title">Where I&apos;ve worked</h2>
             <p className="section-sub">
-              5+ years building systems software in C++ and Go - real-time
-              embedded platforms, distributed telecom infrastructure, and
-              database-backed systems.
+              5+ years building AI agent systems and the production backends
+              behind them.
             </p>
             <a
               href="https://www.linkedin.com/in/akash-nikam-profile/"
@@ -30,86 +29,111 @@ export default function Experience() {
                   Senior Software Engineer - AI Agents &amp; Backend
                 </div>
                 <div className="tl-period">Oct 2023 - Present · Pune, Hybrid</div>
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--accent)",
+                    margin: "4px 0 10px",
+                  }}
+                >
+                  AI Agent Platform
+                </div>
                 <ul className="tl-bullets">
                   <li>
-                    Wrote a <strong>CAN bus message parser in C++</strong> -
-                    parsed raw J1939/ISOBUS frames into accurate structured
-                    messages with correct byte ordering, signal extraction,
-                    and timing-sensitive protocol handling for embedded
-                    agricultural hardware running at up to{" "}
-                    <strong>1,000 Hz</strong> at sub-millisecond latency in
-                    production.
+                    Architected a <strong>12-agent AI platform</strong>{" "}
+                    automating the full engineering SDLC, from epic creation and
+                    user-story writing to bug triage, code review, and infra
+                    docs, with specialized agents (planner, developer, reviewer,
+                    static-analyzer, link-tester) coordinated through a{" "}
+                    <strong>durable LangGraph orchestration layer</strong>.
+                    Deployed across <strong>3-4 engineering teams</strong>,
+                    cutting engineering time by <strong>50-70%</strong>.
                   </li>
                   <li>
-                    Designed and built <strong>connection lifecycle state
-                    machines</strong> from scratch in C++ - per-error recovery
-                    paths, sub-second async/non-blocking event processing, and
-                    graceful state transitions under real-time embedded
-                    constraints. Same discipline as database concurrency
-                    control and transaction state management.
+                    Built a <strong>code knowledge graph</strong> that parses an
+                    entire codebase into a call/dependency graph, ranks the most
+                    important nodes with <strong>PageRank</strong>, and renders
+                    an interactive dependency visualization, giving every agent
+                    a structural map of the code.
                   </li>
                   <li>
-                    Worked across a <strong>large-scale production
-                    C++14/17 codebase</strong> - navigated complex module
-                    dependencies, applied resource management, smart pointer
-                    ownership semantics, and polymorphic interface
-                    hierarchies. Authored <strong>Protocol Buffer schemas
-                    across 50+ .proto files</strong> for a layered data
-                    streaming stack with session management and file transfer
-                    services.
+                    Engineered a <strong>graph-based RAG retrieval pipeline</strong>{" "}
+                    that grounds agents in real code by blending keyword search,
+                    PageRank importance, and graph-neighbor proximity with
+                    task-type weighting, so each agent sees only the relevant
+                    code and hallucination stays suppressed.
                   </li>
                   <li>
-                    Designed <strong>multi-path failover architecture</strong>{" "}
-                    across CAN, FTP, and MQTT - independent health checks per
-                    path, automatic protocol switching on failure. Continuous
-                    data flow with zero manual intervention, even during
-                    partial infrastructure outages.
+                    Designed <strong>durable, local-first execution</strong>{" "}
+                    with a custom LangGraph checkpointer over local SQLite, so
+                    agent runs are resumable and crash-safe with no central
+                    server, keeping all source and state on the developer&apos;s
+                    machine.
                   </li>
                   <li>
-                    Built a production{" "}
-                    <strong>health monitoring system</strong> with 1-second
-                    heartbeat polling, RTT-based degradation detection
-                    30–60s before failure, and a 150-second field-validated
-                    SLO threshold. Achieved{" "}
-                    <strong>&lt;0.1% false positive rate</strong> and zero
-                    missed disconnects.
+                    Wired agents into <strong>automated quality gates</strong>{" "}
+                    (lint, type-check, test, smoke-test, and duplicate-detection)
+                    run by dedicated reviewer, static-analyzer, and link-tester
+                    agents as merge blockers on every change.
                   </li>
                   <li>
-                    Architected a billing-critical{" "}
-                    <strong>distributed data pipeline</strong> - Collect →
-                    Persist → Reconstitute → Verify - using SQLite, protobuf
-                    serialization, and checksum validation at every stage.
-                    Zero data loss, zero duplication across all production
-                    revenue records tied to billing.
+                    Rolled out the agent platform across{" "}
+                    <strong>3-4 engineering teams</strong> through hands-on KT
+                    sessions, integrating directly into existing workflows.
+                    Teams shifted from writing to reviewing and validating
+                    AI-generated output, backed by a structured{" "}
+                    <strong>quality-gate process</strong> to approve results
+                    before adoption.
                   </li>
                   <li>
-                    Built <strong>distributed M2M collaboration services</strong>{" "}
-                    (MQTT pub/sub + protobuf contracts) enabling real-time
-                    sharing of coverage maps, session context, and work state
-                    across coordinated machine fleets - consumed by{" "}
-                    <strong>20+ equipment plugins</strong> across the
-                    organization.
+                    Built a real-time <strong>machine visualization UI</strong>{" "}
+                    from scratch using GitHub Copilot with no prior reference on
+                    the platform, delivered <strong>~50% faster</strong> than
+                    the traditional estimate.
+                  </li>
+                </ul>
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--accent)",
+                    margin: "22px 0 10px",
+                  }}
+                >
+                  Plant Brain · RAG Copilot
+                </div>
+                <ul className="tl-bullets">
+                  <li>
+                    Built <strong>Plant Brain</strong>, a production RAG copilot
+                    for manufacturing SOPs, now in pilot with technicians
+                    querying in production.
                   </li>
                   <li>
-                    Built <strong>Plant Brain</strong>, a production RAG
-                    platform that uses <strong>PostgreSQL as an
-                    ACID-compliant append-only audit log</strong> and
-                    full-text fallback layer - 3-lane parallel retrieval
-                    (Qdrant hybrid BM25 + dense vector search + entity graph,
-                    fused via RRF), secure multi-tenant isolation (RBAC
-                    scoping, prompt-injection defence), a 50-question eval
-                    harness with cross-model grading, and a 6-layer fallback
-                    architecture with zero silent failures. Pilot live -
-                    technicians querying in production.
+                    Engineered <strong>3-lane parallel retrieval</strong>:
+                    Qdrant hybrid (BM25 + dense vectors) and an entity graph,
+                    fused via <strong>RRF</strong>, with correction and outcome
+                    boosting synced into the vector payload.
                   </li>
                   <li>
-                    Designed and shipped a <strong>12-agent AI orchestration
-                    platform</strong> covering the full SDLC, deployed across
-                    3–4 engineering teams and cutting engineering time by{" "}
-                    <strong>50–70%</strong>. Also built a real-time{" "}
-                    <strong>machine visualization UI</strong> from scratch,
-                    delivered <strong>~50% faster</strong> than the
-                    traditional estimate.
+                    Enforced <strong>secure multi-tenant isolation</strong>:
+                    plant_id scoping on every query, RBAC,
+                    prompt-injection defence, and append-only audit logs,
+                    validated against a real container.
+                  </li>
+                  <li>
+                    Built a <strong>50-question eval harness</strong> with
+                    cross-model grading (Claude Opus + GPT-4o), wired into CI as
+                    a ratchet that fails the build on any quality regression.
+                  </li>
+                  <li>
+                    Designed a <strong>6-layer fallback architecture</strong>{" "}
+                    with zero silent failures, degrading gracefully across
+                    retrieval and model layers under partial failure.
                   </li>
                 </ul>
               </div>
@@ -187,7 +211,7 @@ export default function Experience() {
                     communication across distributed components.
                   </li>
                   <li>
-                    Wrote <strong>unit tests</strong> across 2–3 microservices,
+                    Wrote <strong>unit tests</strong> across 2-3 microservices,
                     improving coverage and reliability of core services -
                     disciplined about testing and regression prevention from
                     day one.

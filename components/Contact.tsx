@@ -21,7 +21,7 @@ export default function Contact() {
             }}
           >
             Whether it&apos;s a collaboration, a project idea, or just a
-            curious question - I&apos;m all ears.
+            curious question, I&apos;m all ears.
           </p>
           <a href="mailto:akashvnikam@gmail.com" className="contact-email">
             akashvnikam@gmail.com

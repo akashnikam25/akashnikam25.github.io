@@ -5,61 +5,58 @@ type SkillGroup = {
 
 const skillGroups: SkillGroup[] = [
   {
-    name: "Systems Languages",
-    tags: [
-      { label: "C++14/17", highlight: true },
-      { label: "Go", highlight: true },
-      { label: "Python" },
-    ],
-  },
-  {
-    name: "Database",
-    tags: [
-      { label: "PostgreSQL", highlight: true },
-      { label: "Query Optimisation", highlight: true },
-      { label: "TimescaleDB", highlight: true },
-      { label: "SingleStore" },
-      { label: "CouchDB" },
-      { label: "MongoDB" },
-      { label: "Qdrant" },
-    ],
-  },
-  {
-    name: "Systems / Embedded",
-    tags: [
-      { label: "CAN Bus", highlight: true },
-      { label: "Real-time Systems", highlight: true },
-      { label: "IPC" },
-      { label: "gRPC" },
-      { label: "MQTT" },
-    ],
-  },
-  {
-    name: "Build & Validation",
-    tags: [
-      { label: "CMake" },
-      { label: "x86-64 + ARM Cross-compilation" },
-      { label: "Jenkins CI/CD" },
-      { label: "Google Test/Mock" },
-    ],
-  },
-  {
-    name: "Infrastructure",
-    tags: [
-      { label: "Kubernetes" },
-      { label: "Docker" },
-      { label: "AWS" },
-      { label: "AKS" },
-      { label: "GitHub Actions" },
-    ],
-  },
-  {
     name: "AI & Agents",
     tags: [
-      { label: "Agentic AI" },
-      { label: "LLMs" },
-      { label: "Claude / MCP" },
-      { label: "RAG" },
+      { label: "Agentic AI", highlight: true },
+      { label: "LLMs", highlight: true },
+      { label: "Claude / MCP", highlight: true },
+      { label: "RAG", highlight: true },
+      { label: "LangGraph" },
+      { label: "Vector Search / Qdrant" },
+      { label: "Evals" },
+      { label: "Prompt Engineering" },
+    ],
+  },
+  {
+    name: "Backend",
+    tags: [
+      { label: "Go", highlight: true },
+      { label: "Python / FastAPI", highlight: true },
+      { label: "gRPC" },
+      { label: "Protocol Buffers" },
+      { label: "REST APIs" },
+      { label: "Microservices" },
+    ],
+  },
+  {
+    name: "Frontend",
+    tags: [
+      { label: "TypeScript", highlight: true },
+      { label: "React + Vite" },
+      { label: "JavaScript" },
+      { label: "WebRTC" },
+      { label: "SSE / Streaming" },
+    ],
+  },
+  {
+    name: "Databases",
+    tags: [
+      { label: "Postgres" },
+      { label: "MongoDB" },
+      { label: "Redis" },
+      { label: "DynamoDB" },
+      { label: "CouchDB" },
+      { label: "Singlestore" },
+    ],
+  },
+  {
+    name: "DevOps & Infra",
+    tags: [
+      { label: "Docker" },
+      { label: "Kubernetes" },
+      { label: "Nginx" },
+      { label: "CI/CD" },
+      { label: "GitHub Actions" },
     ],
   },
 ];
@@ -73,8 +70,8 @@ export default function Skills() {
             <div className="section-tag">Skills &amp; Stack</div>
             <h2 className="section-title">What I work with</h2>
             <p className="section-sub">
-              Technologies I reach for when shipping real systems - not just
-              listed, actually used.
+              Technologies I reach for when shipping real systems, not just
+              listed but actually used.
             </p>
           </div>
         </div>

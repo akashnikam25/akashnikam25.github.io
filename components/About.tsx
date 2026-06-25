@@ -15,42 +15,40 @@ export default function About() {
           <div className="about-text reveal">
             <h2>About me</h2>
             <p>
-              I&apos;m a Senior Software Engineer at <strong>John Deere</strong>,
-              where I build systems software in <strong>C++</strong> - real-time
-              protocol stacks, connection lifecycle state machines, and
-              large-scale embedded platforms running in production on
-              agricultural hardware.
+              I&apos;m an <strong>AI engineer</strong> who builds agentic
+              systems for a living. Currently a Senior Software Engineer at{" "}
+              <strong>John Deere</strong>, where I design and ship multi-agent
+              platforms that change how engineering teams actually work - the
+              intersection of <strong>LLMs, backend systems,</strong> and
+              shipping real things people use.
             </p>
             <p>
-              My focus is <strong>distributed systems and reliability</strong>:
-              a CAN bus message parser decoding J1939/ISOBUS frames at up to{" "}
-              <strong>1,000 Hz</strong> with sub-millisecond latency,
-              multi-path failover across CAN/FTP/MQTT, and a health monitoring
-              system with sub-second heartbeat polling and a{" "}
-              <strong>&lt;0.1% false positive rate</strong>.
+              The thing that drives me: <strong>I learn by building</strong>.
+              When I want to understand something - OAuth and webhooks, RAG
+              retrieval, bounded AI pipelines - I don&apos;t just read about it,
+              I ship a working version. That&apos;s where ZapBridge, ARKEN, and
+              PlantIQ came from: each one started as a question I couldn&apos;t
+              answer from a blog post.
             </p>
             <p>
-              I also built <strong>Plant Brain</strong>, a production RAG
-              platform that uses <strong>PostgreSQL as an ACID-compliant
-              append-only audit log</strong> - which pulled me deeper into
-              databases. I&apos;m now studying <strong>TimescaleDB</strong>{" "}
-              internals: hypertable architecture, compression, and how
-              time-series engines extend Postgres at scale. Genuinely
-              interested in moving from systems that use databases to systems
-              that build them.
+              I&apos;m allergic to hand-waving. I&apos;d rather say{" "}
+              <em>&quot;I haven&apos;t built that yet&quot;</em> and go build it
+              than fake my way through - and when I build, I care about the{" "}
+              <strong>why</strong> behind every decision: timing-safe
+              validation, idempotency, graceful degradation, not just code that
+              happens to run.
             </p>
             <p>
-              Before Deere, I spent 2+ years at <strong>Mavenir</strong>{" "}
-              building Go microservices on <strong>SingleStore</strong> for
-              telecom-grade analytics - high-frequency polling, concurrent
-              goroutines, and distributed data storage in a production,
-              Kubernetes-based environment.
+              Before Deere I spent 2+ years at <strong>Mavenir</strong> building
+              Go microservices for telecom-grade analytics on Kubernetes.
+              Outside of code: dissecting new architectures and occasionally
+              writing on Medium about things I figured out the hard way.
             </p>
             <div className="about-chips">
               <span className="chip">Pune, India</span>
               <span className="chip">Open to remote</span>
-              <span className="chip">Systems &amp; C++</span>
-              <span className="chip">Databases</span>
+              <span className="chip">AI Engineer</span>
+              <span className="chip">Agentic Systems</span>
             </div>
           </div>
         </div>

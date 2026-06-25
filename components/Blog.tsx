@@ -1,7 +1,7 @@
 const posts = [
   { title: "AI Agents & the SDLC", tag: "AI Systems" },
-  { title: "Building Go microservices at scale", tag: "Go · Backend" },
-  { title: "LLM-powered job matching", tag: "LLM · Projects" },
+  { title: "Designing production RAG systems", tag: "RAG · Retrieval" },
+  { title: "Event-driven integrations done right", tag: "Backend" },
 ];
 
 const MEDIUM_URL = "https://medium.com/@akash2018nikam";

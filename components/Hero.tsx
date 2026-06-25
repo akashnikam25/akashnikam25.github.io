@@ -9,21 +9,21 @@ type TermLine =
   | { type: "success"; text: string };
 
 const termLines: TermLine[] = [
-  { type: "cmd", prompt: "❯", text: "./can_parser --proto j1939 --rate 1000hz" },
-  { type: "out", text: "  Initializing protocol stack..." },
-  { type: "agent", label: "[parser]", text: "Decoding ISOBUS frames → byte order + signal extraction OK" },
-  { type: "agent", label: "[state-machine]", text: "Connection lifecycle: recovery path triggered → restored in 0.4s" },
-  { type: "agent", label: "[audit-log]", text: "PostgreSQL append-only commit · ACID verified · 0 silent failures" },
-  { type: "agent", label: "[health]", text: "Heartbeat 1s · RTT nominal · 0 missed disconnects" },
-  { type: "success", text: "  ✓ All systems healthy · throughput nominal" },
-  { type: "out", text: "  Rate: 1,000 Hz  |  Latency: <1ms  |  False positives: <0.1%" },
+  { type: "cmd", prompt: "❯", text: "python agent_orchestrator.py --run" },
+  { type: "out", text: "  Initializing SDLC agent network..." },
+  { type: "agent", label: "[epic-agent]", text: "Parsing JIRA backlog → 14 epics mapped" },
+  { type: "agent", label: "[story-agent]", text: "Generating user stories... ✓ 47 stories" },
+  { type: "agent", label: "[code-agent]", text: "Reviewing PR #2341 → 3 suggestions" },
+  { type: "agent", label: "[infra-agent]", text: "Docs updated for platform variant" },
+  { type: "success", text: "  ✓ All agents healthy · 12/12 online" },
+  { type: "out", text: "  Active teams: 4  |  Velocity +62%" },
 ];
 
 const roles = [
-  "Senior Software Engineer",
-  "C++ & Distributed Systems",
-  "PostgreSQL & Database Internals",
-  "Building reliable systems software",
+  "AI Engineer",
+  "Agentic Systems Architect",
+  "LLM & RAG Engineer",
+  "Making teams 50-70% faster",
 ];
 
 export default function Hero() {
@@ -129,7 +129,7 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
-            <span>Available for collaborations</span>
+            <span>Open to opportunities</span>
           </div>
           <h1 className="hero-name">
             <span className="line1">Akash</span>
@@ -140,12 +140,9 @@ export default function Hero() {
             <span className="cursor"></span>
           </div>
           <p className="hero-desc">
-            Building reliable <strong>systems software</strong> in C++ and Go —
-            real-time protocol stacks, connection lifecycle state machines, and{" "}
-            <strong>PostgreSQL</strong>-backed platforms with zero silent
-            failures. Senior Software Engineer at John Deere, working across
-            large-scale C++14/17 codebases, embedded real-time systems, and
-            distributed data infrastructure.
+            Building <strong>AI-powered workflows</strong> that make engineering
+            teams <strong>50-70% faster.</strong> AI engineer at John Deere,
+            specializing in multi-agent systems, RAG, and production AI backends.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">
@@ -166,12 +163,12 @@ export default function Hero() {
               <div className="stat-label">Years experience</div>
             </div>
             <div>
-              <div className="stat-num">1,000Hz</div>
-              <div className="stat-label">Real-time CAN bus throughput</div>
+              <div className="stat-num">12</div>
+              <div className="stat-label">Agents built at Deere</div>
             </div>
             <div>
-              <div className="stat-num">C++14/17</div>
-              <div className="stat-label">Production-scale systems</div>
+              <div className="stat-num">50%↑</div>
+              <div className="stat-label">Team velocity gains</div>
             </div>
             <div>
               <div className="stat-num">6+</div>
@@ -186,38 +183,38 @@ export default function Hero() {
               <span className="term-dot term-dot-r"></span>
               <span className="term-dot term-dot-y"></span>
               <span className="term-dot term-dot-g"></span>
-              <span className="term-title">can_parser.cpp</span>
+              <span className="term-title">agent-orchestrator.py</span>
               <span className="term-status"></span>
             </div>
             <div className="agent-terminal-body" id="term-body" ref={termBodyRef}></div>
           </div>
           <div className="hero-mini-cards">
             <div className="hero-mini-card">
-              <div className="mini-card-icon">⚙️</div>
+              <div className="mini-card-icon">🤖</div>
               <div>
-                <div className="mini-card-val">1,000 Hz</div>
-                <div className="mini-card-label">CAN bus parsing, sub-ms latency</div>
+                <div className="mini-card-val">12 Agents</div>
+                <div className="mini-card-label">deployed at Deere</div>
               </div>
             </div>
             <div className="hero-mini-card">
-              <div className="mini-card-icon">🗄️</div>
+              <div className="mini-card-icon">⚡</div>
               <div>
-                <div className="mini-card-val">PostgreSQL</div>
-                <div className="mini-card-label">ACID-compliant audit logs in prod</div>
+                <div className="mini-card-val">50-70%</div>
+                <div className="mini-card-label">velocity gain</div>
               </div>
             </div>
             <div className="hero-mini-card">
-              <div className="mini-card-icon">🔌</div>
+              <div className="mini-card-icon">🔗</div>
               <div>
-                <div className="mini-card-val">50+</div>
-                <div className="mini-card-label">.proto schemas authored</div>
+                <div className="mini-card-val">Full SDLC</div>
+                <div className="mini-card-label">AI coverage</div>
               </div>
             </div>
             <div className="hero-mini-card">
-              <div className="mini-card-icon">🛡️</div>
+              <div className="mini-card-icon">🌐</div>
               <div>
-                <div className="mini-card-val">&lt;0.1%</div>
-                <div className="mini-card-label">false positive rate, 0 missed disconnects</div>
+                <div className="mini-card-val">3-4 Teams</div>
+                <div className="mini-card-label">actively using</div>
               </div>
             </div>
           </div>
