@@ -105,13 +105,13 @@ export default function Experience() {
                     margin: "22px 0 10px",
                   }}
                 >
-                  Plant Brain · RAG Copilot
+                  Production RAG Platform
                 </div>
                 <ul className="tl-bullets">
                   <li>
-                    Built <strong>Plant Brain</strong>, a production RAG copilot
-                    for manufacturing SOPs, now in pilot with technicians
-                    querying in production.
+                    Built a <strong>production RAG copilot</strong> for
+                    manufacturing SOPs, now in pilot with technicians querying
+                    in production.
                   </li>
                   <li>
                     Engineered <strong>3-lane parallel retrieval</strong>:
