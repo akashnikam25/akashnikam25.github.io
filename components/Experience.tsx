@@ -39,60 +39,24 @@ export default function Experience() {
                     margin: "4px 0 10px",
                   }}
                 >
-                  AI Agent Platform
+                  EmbAI-ASCENT
                 </div>
                 <ul className="tl-bullets">
                   <li>
-                    Architected a <strong>12-agent AI platform</strong>{" "}
-                    automating the full engineering SDLC, from epic creation and
-                    user-story writing to bug triage, code review, and infra
-                    docs, with specialized agents (planner, developer, reviewer,
-                    static-analyzer, link-tester) coordinated through a{" "}
-                    <strong>durable LangGraph orchestration layer</strong>.
-                    Deployed across <strong>3-4 engineering teams</strong>,
-                    cutting engineering time by <strong>50-70%</strong>.
+                    Built <strong>EmbAI-ASCENT</strong>, a governed VS Code
+                    extension for the engineering SDLC: agent-pack
+                    distribution via a custom CLI (
+                    <strong>Agent Package Manager</strong>), 3{" "}
+                    <strong>MCP servers</strong> (Azure DevOps, Confluence,
+                    GitHub Enterprise), and 4 custom LM tools wired into
+                    Copilot Chat.
                   </li>
                   <li>
-                    Built a <strong>code knowledge graph</strong> that parses an
-                    entire codebase into a call/dependency graph, ranks the most
-                    important nodes with <strong>PageRank</strong>, and renders
-                    an interactive dependency visualization, giving every agent
-                    a structural map of the code.
-                  </li>
-                  <li>
-                    Engineered a <strong>graph-based RAG retrieval pipeline</strong>{" "}
-                    that grounds agents in real code by blending keyword search,
-                    PageRank importance, and graph-neighbor proximity with
-                    task-type weighting, so each agent sees only the relevant
-                    code and hallucination stays suppressed.
-                  </li>
-                  <li>
-                    Designed <strong>durable, local-first execution</strong>{" "}
-                    with a custom LangGraph checkpointer over local SQLite, so
-                    agent runs are resumable and crash-safe with no central
-                    server, keeping all source and state on the developer&apos;s
-                    machine.
-                  </li>
-                  <li>
-                    Wired agents into <strong>automated quality gates</strong>{" "}
-                    (lint, type-check, test, smoke-test, and duplicate-detection)
-                    run by dedicated reviewer, static-analyzer, and link-tester
-                    agents as merge blockers on every change.
-                  </li>
-                  <li>
-                    Rolled out the agent platform across{" "}
-                    <strong>3-4 engineering teams</strong> through hands-on KT
-                    sessions, integrating directly into existing workflows.
-                    Teams shifted from writing to reviewing and validating
-                    AI-generated output, backed by a structured{" "}
-                    <strong>quality-gate process</strong> to approve results
-                    before adoption.
-                  </li>
-                  <li>
-                    Built a real-time <strong>machine visualization UI</strong>{" "}
-                    from scratch using GitHub Copilot with no prior reference on
-                    the platform, delivered <strong>~50% faster</strong> than
-                    the traditional estimate.
+                    Designed a <strong>13-phase context-engineering webview</strong>{" "}
+                    with keyword-scoring context assembly and{" "}
+                    <strong>workspaceState</strong>-backed session continuity,
+                    so engineers can resume multi-day planning threads
+                    without losing context.
                   </li>
                 </ul>
                 <div
@@ -105,35 +69,59 @@ export default function Experience() {
                     margin: "22px 0 10px",
                   }}
                 >
-                  Production RAG Platform
+                  PlantIQ (Plant Brain)
                 </div>
                 <ul className="tl-bullets">
                   <li>
-                    Built a <strong>production RAG copilot</strong> for
-                    manufacturing SOPs, now in pilot with technicians querying
-                    in production.
+                    Built <strong>PlantIQ</strong> (Plant Brain), an
+                    access-controlled <strong>RAG copilot</strong> for
+                    plant-floor maintenance technicians: hybrid BM25 + dense
+                    (bge-small-en-v1.5) retrieval fused via{" "}
+                    <strong>Reciprocal Rank Fusion</strong> over
+                    Docling-chunked SOPs, serving at <strong>P95 268ms</strong>.
                   </li>
                   <li>
-                    Engineered <strong>3-lane parallel retrieval</strong>:
-                    Qdrant hybrid (BM25 + dense vectors) and an entity graph,
-                    fused via <strong>RRF</strong>, with correction and outcome
-                    boosting synced into the vector payload.
+                    Hardened PlantIQ with deterministic{" "}
+                    <strong>fail-closed guardrails</strong> (confidence
+                    gating, 15% grounding threshold),{" "}
+                    <strong>JWT-derived</strong> plant_id/org_id access
+                    scoping, and a <strong>CI-gated evaluation harness</strong>{" "}
+                    (dual LLM-as-Judge, Claude Opus + GPT-4o, 0.20 divergence
+                    flag).
+                  </li>
+                </ul>
+                <div
+                  style={{
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.08em",
+                    textTransform: "uppercase",
+                    color: "var(--accent)",
+                    margin: "22px 0 10px",
+                  }}
+                >
+                  AI Developer Assistant Platform
+                </div>
+                <ul className="tl-bullets">
+                  <li>
+                    Migrated a single-PDF chatbot into the{" "}
+                    <strong>AI Developer Assistant Platform</strong>: a{" "}
+                    <strong>ReAct-based agentic RAG</strong> system on{" "}
+                    <strong>AWS Bedrock</strong> across 7 Lambda-backed
+                    knowledge bases (Titan V2 embeddings, OpenSearch
+                    Serverless).
                   </li>
                   <li>
-                    Enforced <strong>secure multi-tenant isolation</strong>:
-                    plant_id scoping on every query, RBAC,
-                    prompt-injection defence, and append-only audit logs,
-                    validated against a real container.
+                    Built a <strong>FalkorDB code knowledge graph</strong>{" "}
+                    over 9 repositories (tree-sitter, 25 languages) and a{" "}
+                    <strong>multi-agent orchestration layer</strong>{" "}
+                    (Supervisor/Researcher/Coder/Writer) with a sequential
+                    RFI pipeline.
                   </li>
                   <li>
-                    Built a <strong>50-question eval harness</strong> with
-                    cross-model grading (Claude Opus + GPT-4o), wired into CI as
-                    a ratchet that fails the build on any quality regression.
-                  </li>
-                  <li>
-                    Designed a <strong>6-layer fallback architecture</strong>{" "}
-                    with zero silent failures, degrading gracefully across
-                    retrieval and model layers under partial failure.
+                    Shipped an <strong>MCP server</strong> exposing 40+ tools
+                    / 140+ skills across Slack, CLI, web, and n8n, deployed
+                    on <strong>EKS</strong> with GitOps-driven CI/CD.
                   </li>
                 </ul>
               </div>

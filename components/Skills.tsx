@@ -1,20 +1,27 @@
 type SkillGroup = {
   name: string;
+  wide?: boolean;
   tags: { label: string; highlight?: boolean }[];
 };
 
 const skillGroups: SkillGroup[] = [
   {
     name: "AI & Agents",
+    wide: true,
     tags: [
       { label: "Agentic AI", highlight: true },
-      { label: "LLMs", highlight: true },
-      { label: "Claude / MCP", highlight: true },
+      { label: "Agentic RAG", highlight: true },
+      { label: "Multi-Agent Systems", highlight: true },
       { label: "RAG", highlight: true },
+      { label: "MCP", highlight: true },
+      { label: "LLM-as-Judge Evaluation", highlight: true },
       { label: "LangGraph" },
-      { label: "Vector Search / Qdrant" },
-      { label: "Evals" },
-      { label: "Prompt Engineering" },
+      { label: "LangChain" },
+      { label: "AWS Bedrock" },
+      { label: "Hybrid Search (BM25 + RRF)" },
+      { label: "Vector Search (Qdrant / OpenSearch)" },
+      { label: "Context & Prompt Engineering" },
+      { label: "AI Agent Governance" },
     ],
   },
   {
@@ -77,7 +84,10 @@ export default function Skills() {
         </div>
         <div className="skill-groups reveal">
           {skillGroups.map((group) => (
-            <div className="skill-group" key={group.name}>
+            <div
+              className={`skill-group${group.wide ? " skill-group--wide" : ""}`}
+              key={group.name}
+            >
               <div className="skill-group-name">{group.name}</div>
               <div className="skill-tags">
                 {group.tags.map((tag) => (

@@ -9,21 +9,20 @@ type TermLine =
   | { type: "success"; text: string };
 
 const termLines: TermLine[] = [
-  { type: "cmd", prompt: "❯", text: "python agent_orchestrator.py --run" },
-  { type: "out", text: "  Initializing SDLC agent network..." },
-  { type: "agent", label: "[epic-agent]", text: "Parsing JIRA backlog → 14 epics mapped" },
-  { type: "agent", label: "[story-agent]", text: "Generating user stories... ✓ 47 stories" },
-  { type: "agent", label: "[code-agent]", text: "Reviewing PR #2341 → 3 suggestions" },
-  { type: "agent", label: "[infra-agent]", text: "Docs updated for platform variant" },
-  { type: "success", text: "  ✓ All agents healthy · 12/12 online" },
-  { type: "out", text: "  Active teams: 4  |  Velocity +62%" },
+  { type: "cmd", prompt: "❯", text: "python agent.py --query \"why is auth failing in staging?\"" },
+  { type: "out", text: "  Initializing agentic RAG loop (ReAct)..." },
+  { type: "agent", label: "[retriever]", text: "Searching 7 knowledge bases via OpenSearch Serverless" },
+  { type: "agent", label: "[code-graph]", text: "Querying FalkorDB over 9 repos (tree-sitter)" },
+  { type: "agent", label: "[mcp]", text: "Routing to Slack tool → posting findings" },
+  { type: "success", text: "  ✓ Answer grounded · 3 sources cited" },
+  { type: "out", text: "  Tools: 40+  |  Skills: 140+  |  Deployed on EKS" },
 ];
 
 const roles = [
   "AI Engineer",
-  "Agentic Systems Architect",
-  "LLM & RAG Engineer",
-  "Making teams 50-70% faster",
+  "Agentic RAG & Multi-Agent Systems",
+  "MCP & LLM Platforms",
+  "Shipping production AI at John Deere",
 ];
 
 export default function Hero() {
@@ -140,9 +139,10 @@ export default function Hero() {
             <span className="cursor"></span>
           </div>
           <p className="hero-desc">
-            Building <strong>AI-powered workflows</strong> that make engineering
-            teams <strong>50-70% faster.</strong> AI engineer at John Deere,
-            specializing in multi-agent systems, RAG, and production AI backends.
+            Building production <strong>agentic RAG systems</strong> and{" "}
+            <strong>MCP-integrated developer tools</strong> at John Deere -
+            from a plant-floor maintenance copilot to a multi-agent platform
+            on AWS Bedrock.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">
@@ -163,16 +163,16 @@ export default function Hero() {
               <div className="stat-label">Years experience</div>
             </div>
             <div>
-              <div className="stat-num">12</div>
-              <div className="stat-label">Agents built at Deere</div>
+              <div className="stat-num">3</div>
+              <div className="stat-label">Production AI systems shipped</div>
             </div>
             <div>
-              <div className="stat-num">50%↑</div>
-              <div className="stat-label">Team velocity gains</div>
+              <div className="stat-num">268ms</div>
+              <div className="stat-label">P95 RAG retrieval latency</div>
             </div>
             <div>
-              <div className="stat-num">6+</div>
-              <div className="stat-label">Projects shipped</div>
+              <div className="stat-num">40+</div>
+              <div className="stat-label">MCP tools shipped</div>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function Hero() {
               <span className="term-dot term-dot-r"></span>
               <span className="term-dot term-dot-y"></span>
               <span className="term-dot term-dot-g"></span>
-              <span className="term-title">agent-orchestrator.py</span>
+              <span className="term-title">agent.py</span>
               <span className="term-status"></span>
             </div>
             <div className="agent-terminal-body" id="term-body" ref={termBodyRef}></div>
@@ -192,29 +192,29 @@ export default function Hero() {
             <div className="hero-mini-card">
               <div className="mini-card-icon">🤖</div>
               <div>
-                <div className="mini-card-val">12 Agents</div>
-                <div className="mini-card-label">deployed at Deere</div>
+                <div className="mini-card-val">3 AI Systems</div>
+                <div className="mini-card-label">shipped at Deere</div>
               </div>
             </div>
             <div className="hero-mini-card">
               <div className="mini-card-icon">⚡</div>
               <div>
-                <div className="mini-card-val">50-70%</div>
-                <div className="mini-card-label">velocity gain</div>
+                <div className="mini-card-val">268ms P95</div>
+                <div className="mini-card-label">RAG latency</div>
               </div>
             </div>
             <div className="hero-mini-card">
               <div className="mini-card-icon">🔗</div>
               <div>
-                <div className="mini-card-val">Full SDLC</div>
-                <div className="mini-card-label">AI coverage</div>
+                <div className="mini-card-val">40+ Tools</div>
+                <div className="mini-card-label">via MCP</div>
               </div>
             </div>
             <div className="hero-mini-card">
               <div className="mini-card-icon">🌐</div>
               <div>
-                <div className="mini-card-val">3-4 Teams</div>
-                <div className="mini-card-label">actively using</div>
+                <div className="mini-card-val">EKS</div>
+                <div className="mini-card-label">production deploy</div>
               </div>
             </div>
           </div>
