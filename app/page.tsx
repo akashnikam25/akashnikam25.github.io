@@ -66,7 +66,7 @@ const oss = [
   {
     meta: "2026 · team of 2",
     title: "Arken AI",
-    body: "Turns plain-English requirements into audited heat-exchanger designs. Claude reviews each of 16 steps, but hard engineering rules always win. Live progress streams to a React UI, and an MCP server exposes the engine.",
+    body: "Turns plain-English requirements into audited heat-exchanger designs. Claude reviews each of 16 steps, but hard engineering rules always win. Tools are defined in YAML, and live progress streams to a React UI.",
     tags: ["Claude tool calling", "FastAPI", "Redis Streams", "React"],
     href: "https://github.com/Arken-AI",
     caseStudy: "/work/arken-ai/",

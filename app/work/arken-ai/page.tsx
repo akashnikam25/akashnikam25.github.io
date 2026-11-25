@@ -9,12 +9,12 @@ const TEAMMATE = "https://github.com/PranitDhane";
 export const metadata: Metadata = {
   title: "Case study: Arken AI | Akash Nikam",
   description:
-    "An open-source heat-exchanger design assistant: Claude drives a 16-step engineering pipeline, reviews every step, and never overrides the math or the hard rules.",
+    "An open-source heat-exchanger design assistant: Claude drives a 16-step engineering pipeline through YAML-defined tools, reviews the steps, and never overrides the math or the hard rules.",
   alternates: { canonical: "/work/arken-ai/" },
   openGraph: {
     title: "Case study: Arken AI",
     description:
-      "Claude tool calling in front of a deterministic engineering engine, with bounded AI review, human escalation, live streaming and an MCP server.",
+      "Claude tool calling in front of a deterministic engineering engine, with YAML-defined tools, bounded AI review, human escalation and live streaming.",
     url: "https://www.akashnikam.in/work/arken-ai/",
     images: [{ url: "/og.png", width: 1200, height: 630, alt: "Akash Nikam, AI Engineer" }],
   },
@@ -154,7 +154,7 @@ export default function ArkenAi() {
             </div>
             <div>
               <dt>My part</dt>
-              <dd>Orchestration and streaming, the MCP server, the signed requirements token, the redesign loop</dd>
+              <dd>Orchestration, the YAML tool registry, streaming, the signed requirements token, the redesign loop</dd>
             </div>
           </dl>
 
@@ -256,37 +256,57 @@ export default function ArkenAi() {
             </div>
           </section>
 
-          <section className="section" aria-labelledby="mcp">
+          <section className="section" aria-labelledby="tools">
             <div className="section-head reveal">
-              <span className="eyebrow">MCP</span>
-              <h2 id="mcp">The same engine, from Claude Desktop</h2>
+              <span className="eyebrow">Tool calling</span>
+              <h2 id="tools">Tools are config, not code</h2>
               <p className="section-note">
-                I wrote an MCP server that exposes the engine as three tools. It reads the same YAML tool schemas as
-                the backend, so the web app and Claude Desktop can never drift apart.
+                Claude&apos;s tools live in one YAML registry: each engine has a base URL from the environment, and each
+                tool has a description, an endpoint and its required and optional fields. The backend turns it into tool
+                schemas at startup, so adding an engine or a field is a config change.
               </p>
             </div>
             <div className="two-up">
               <figure className="card transcript reveal">
-                <figcaption className="kicker">In Claude Desktop</figcaption>
-                <p className="t-q">
-                  Design a heat exchanger to cool crude oil from 150&nbsp;°C to 80&nbsp;°C using cooling water. Hot side
-                  flow rate is 10&nbsp;kg/s.
-                </p>
-                <ol className="t-options">
-                  <li>hx_validate_requirements</li>
-                  <li>hx_design</li>
-                  <li className="t-rec">get_design_status</li>
-                </ol>
+                <figcaption className="kicker">engines.yaml (trimmed)</figcaption>
+                <pre className="code-block"><code>{`engines:
+  hx_engine:
+    base_url: "\${HX_ENGINE_URL:-http://hx-engine:8100}"
+    tools:
+      - name: hx_validate_requirements
+        description: >
+          Validate requirements before the pipeline.
+          ALWAYS call this before hx_design.
+        endpoint: "/api/v1/hx/requirements"
+        required_fields:
+          - hot_fluid_name
+          - T_hot_in_C
+          - m_dot_hot_kg_s
+          # ...
+      - name: hx_design
+        description: >
+          Start the 16-step design, passing the token.
+        endpoint: "/api/v1/hx/design"
+        streaming: true`}</code></pre>
               </figure>
               <div className="card transcript reveal" style={idx(1)}>
-                <span className="kicker">Grounded in published engineering methods</span>
+                <span className="kicker">Around the tool loop</span>
                 <ul className="next-list plain">
-                  <li><strong>Bell-Delaware</strong> for shell-side heat transfer, cross-checked with Kern. Over 30% apart escalates to the engineer.</li>
-                  <li><strong>Property chain:</strong> IAPWS for water, CoolProp, petroleum correlations for crude, then thermo as a fallback.</li>
-                  <li><strong>Standards:</strong> TEMA geometry and vibration checks, ASME wall thickness.</li>
-                  <li><strong>Reference tests</strong> against textbook worked examples.</li>
+                  <li><strong>Bounded:</strong> at most five tool turns per message.</li>
+                  <li><strong>No re-checking:</strong> once a design starts, the tools are removed so Claude doesn&apos;t validate again.</li>
+                  <li><strong>Cancellable:</strong> the user can stop a reply mid-stream.</li>
+                  <li><strong>Context:</strong> recent messages plus a digest of completed design steps.</li>
                 </ul>
               </div>
+            </div>
+            <div className="card transcript reveal">
+              <span className="kicker">Grounded in published engineering methods</span>
+              <ul className="next-list plain">
+                <li><strong>Bell-Delaware</strong> for shell-side heat transfer, cross-checked with Kern. Over 30% apart escalates to the engineer.</li>
+                <li><strong>Property chain:</strong> IAPWS for water, CoolProp, petroleum correlations for crude, then thermo as a fallback.</li>
+                <li><strong>Standards:</strong> TEMA geometry and vibration checks, ASME wall thickness.</li>
+                <li><strong>Reference tests</strong> against textbook worked examples.</li>
+              </ul>
             </div>
           </section>
 
@@ -309,8 +329,8 @@ export default function ArkenAi() {
                 <span className="result-label">prompt files, versioned as Markdown with prompt caching</span>
               </div>
               <div className="result reveal" style={idx(3)}>
-                <span className="result-value">3</span>
-                <span className="result-label">MCP tools for Claude Desktop</span>
+                <span className="result-value">2</span>
+                <span className="result-label">tools, defined in YAML, between Claude and the engine</span>
               </div>
             </div>
           </section>
@@ -330,7 +350,7 @@ export default function ArkenAi() {
                 </li>
               ))}
             </ul>
-            <Tags items={["Claude Sonnet", "Tool calling", "MCP", "FastAPI", "Redis Streams", "SSE", "MongoDB", "React 19", "Docker"]} />
+            <Tags items={["Claude Sonnet", "Tool calling", "FastAPI", "Redis Streams", "SSE", "MongoDB", "React 19", "Docker"]} />
           </section>
 
           <section className="section" aria-labelledby="next">

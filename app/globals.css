@@ -1253,3 +1253,14 @@ img {
     border-color: var(--accent);
   }
 }
+.code-block {
+  margin: 0;
+  padding: 16px;
+  border-radius: 10px;
+  background: var(--chip);
+  border: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-x: auto;
+}
