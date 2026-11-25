@@ -23,6 +23,11 @@ export default function Nav() {
         <li>
           <a href="#contact">contact</a>
         </li>
+        <li>
+          <a href="/Akash_Nikam_Resume.pdf" download>
+            resume
+          </a>
+        </li>
       </ul>
       <a href="#contact" className="nav-cta">
         Say hello →

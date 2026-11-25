@@ -9,19 +9,20 @@ type TermLine =
   | { type: "success"; text: string };
 
 const termLines: TermLine[] = [
-  { type: "cmd", prompt: "❯", text: "python agent.py --query \"why is auth failing in staging?\"" },
-  { type: "out", text: "  Initializing agentic RAG loop (ReAct)..." },
-  { type: "agent", label: "[retriever]", text: "Searching 7 knowledge bases via OpenSearch Serverless" },
-  { type: "agent", label: "[code-graph]", text: "Querying FalkorDB over 9 repos (tree-sitter)" },
-  { type: "agent", label: "[mcp]", text: "Routing to Slack tool → posting findings" },
-  { type: "success", text: "  ✓ Answer grounded · 3 sources cited" },
-  { type: "out", text: "  Tools: 40+  |  Skills: 140+  |  Deployed on EKS" },
+  { type: "cmd", prompt: "❯", text: "python agent.py --query \"why did the nightly build fail?\"" },
+  { type: "out", text: "  Routing request (keyword score, small classifier if unsure)..." },
+  { type: "agent", label: "[router]", text: "Single specialist agent selected" },
+  { type: "agent", label: "[retriever]", text: "Hybrid search over CI logs, tickets and wiki" },
+  { type: "agent", label: "[code-graph]", text: "Impact analysis across 9 repositories" },
+  { type: "agent", label: "[mcp]", text: "Reading the failed job as the signed-in user" },
+  { type: "success", text: "  ✓ Answer grounded · sources cited" },
+  { type: "out", text: "  Eval gate: passed  |  200+ tools via MCP" },
 ];
 
 const roles = [
   "AI Engineer",
-  "Agentic RAG & Multi-Agent Systems",
-  "MCP & LLM Platforms",
+  "Agentic AI & Multi-Agent Systems",
+  "RAG, MCP & LLM Evaluation",
   "Shipping production AI at John Deere",
 ];
 
@@ -131,7 +132,7 @@ export default function Hero() {
             <span>Open to opportunities</span>
           </div>
           <h1 className="hero-name">
-            <span className="line1">Akash</span>
+            <span className="line1">Akash</span>{" "}
             <span className="line2">Nikam</span>
           </h1>
           <div className="hero-role">
@@ -139,14 +140,17 @@ export default function Hero() {
             <span className="cursor"></span>
           </div>
           <p className="hero-desc">
-            Building production <strong>agentic RAG systems</strong> and{" "}
-            <strong>MCP-integrated developer tools</strong> at John Deere -
-            from a plant-floor maintenance copilot to a multi-agent platform
-            on AWS Bedrock.
+            Building production <strong>agentic AI</strong> at John Deere: a{" "}
+            <strong>multi-agent developer assistant</strong> used by 500+
+            engineers, and a <strong>RAG copilot</strong> for plant-floor
+            maintenance technicians.
           </p>
           <div className="hero-actions">
             <a href="#projects" className="btn-primary">
               View my work ↓
+            </a>
+            <a href="/Akash_Nikam_Resume.pdf" className="btn-ghost" download>
+              Resume ↓
             </a>
             <a
               href="https://github.com/akashnikam25"
@@ -163,16 +167,16 @@ export default function Hero() {
               <div className="stat-label">Years experience</div>
             </div>
             <div>
-              <div className="stat-num">3</div>
-              <div className="stat-label">Production AI systems shipped</div>
+              <div className="stat-num">500+</div>
+              <div className="stat-label">Engineers using my AI tools</div>
             </div>
             <div>
-              <div className="stat-num">268ms</div>
-              <div className="stat-label">P95 RAG retrieval latency</div>
+              <div className="stat-num">92%</div>
+              <div className="stat-label">Retrieval recall@10, up from 76%</div>
             </div>
             <div>
-              <div className="stat-num">40+</div>
-              <div className="stat-label">MCP tools shipped</div>
+              <div className="stat-num">99%</div>
+              <div className="stat-label">Safety pass rate, up from 85%</div>
             </div>
           </div>
         </div>
@@ -193,28 +197,28 @@ export default function Hero() {
               <div className="mini-card-icon">🤖</div>
               <div>
                 <div className="mini-card-val">3 AI Systems</div>
-                <div className="mini-card-label">shipped at Deere</div>
-              </div>
-            </div>
-            <div className="hero-mini-card">
-              <div className="mini-card-icon">⚡</div>
-              <div>
-                <div className="mini-card-val">268ms P95</div>
-                <div className="mini-card-label">RAG latency</div>
+                <div className="mini-card-label">in production</div>
               </div>
             </div>
             <div className="hero-mini-card">
               <div className="mini-card-icon">🔗</div>
               <div>
-                <div className="mini-card-val">40+ Tools</div>
+                <div className="mini-card-val">200+ Tools</div>
                 <div className="mini-card-label">via MCP</div>
+              </div>
+            </div>
+            <div className="hero-mini-card">
+              <div className="mini-card-icon">✅</div>
+              <div>
+                <div className="mini-card-val">Eval-gated</div>
+                <div className="mini-card-label">every prompt and model change</div>
               </div>
             </div>
             <div className="hero-mini-card">
               <div className="mini-card-icon">🌐</div>
               <div>
-                <div className="mini-card-val">EKS</div>
-                <div className="mini-card-label">production deploy</div>
+                <div className="mini-card-val">Kubernetes</div>
+                <div className="mini-card-label">production deploys</div>
               </div>
             </div>
           </div>

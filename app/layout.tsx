@@ -28,26 +28,29 @@ const faviconSvg =
   "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%235b50e8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Arial Black,sans-serif' font-weight='900' font-size='13' fill='white' letter-spacing='-0.5'%3EAN%3C/text%3E%3C/svg%3E";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://akashnikam25.github.io"),
+  metadataBase: new URL("https://www.akashnikam.in"),
   title: "Akash Nikam | AI Engineer",
   description:
-    "AI engineer building multi-agent systems, RAG pipelines, and event-driven backends. Senior Software Engineer at John Deere.",
+    "AI engineer building agentic AI: multi-agent systems, RAG, MCP tools and LLM evaluation. Senior Software Engineer at John Deere.",
+  alternates: { canonical: "/" },
   icons: {
     icon: faviconSvg,
   },
   openGraph: {
     title: "Akash Nikam | AI Engineer",
     description:
-      "AI engineer building multi-agent systems, RAG pipelines, and event-driven backends.",
+      "AI engineer building agentic AI: multi-agent systems, RAG, MCP tools and LLM evaluation.",
     type: "website",
-    url: "https://akashnikam25.github.io",
+    url: "https://www.akashnikam.in",
     siteName: "Akash Nikam",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Akash Nikam, AI Engineer" }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "Akash Nikam | AI Engineer",
     description:
-      "AI engineer building multi-agent systems, RAG pipelines, and event-driven backends.",
+      "AI engineer building agentic AI: multi-agent systems, RAG, MCP tools and LLM evaluation.",
+    images: ["/og.png"],
   },
 };
 

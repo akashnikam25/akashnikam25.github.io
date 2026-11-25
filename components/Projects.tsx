@@ -9,33 +9,33 @@ type Project = {
 const projects: Project[] = [
   {
     num: "01",
-    name: "PlantIQ (Plant Brain)",
+    name: "Multi-agent developer assistant",
     description:
-      "Access-controlled RAG copilot for industrial plant-floor maintenance. Hybrid BM25 + dense (bge-small-en-v1.5) retrieval fused via Reciprocal Rank Fusion over Docling-chunked SOPs, deterministic fail-closed guardrails, and a CI-gated evaluation harness with dual LLM-as-Judge scoring - serving at P95 268ms.",
-    tags: ["RAG", "Qdrant", "FastAPI", "Python"],
+      "Governed assistant on AWS Bedrock used by 500+ engineers: a hybrid router, 40 agents built on reusable skills, 200+ MCP tools that act as the signed-in user, agent memory, and an LLM-as-judge release gate.",
+    tags: ["Agentic AI", "MCP", "AWS Bedrock", "Evals"],
     href: "#experience",
   },
   {
     num: "02",
-    name: "EmbAI-ASCENT",
+    name: "Plant-maintenance RAG copilot",
     description:
-      "Governed VS Code extension for the engineering SDLC. Agent-pack distribution via a custom CLI, 3 MCP servers into Azure DevOps, Confluence, and GitHub Enterprise, and a 13-phase context-engineering webview feeding Copilot Chat.",
-    tags: ["MCP", "VS Code Extension", "TypeScript"],
+      "Grounded answers for 30+ technicians over 500+ SOPs: OCR ingestion, section-aware chunks, hybrid search and reranking (recall@10 from 76% to 92%), with code-side safety checks and a zero-safety-failure release gate (safety pass rate from 85% to 99%).",
+    tags: ["RAG", "pgvector", "Hybrid Search", "Evals"],
     href: "#experience",
   },
   {
     num: "03",
-    name: "AI Developer Assistant Platform",
+    name: "AI-assisted SDLC",
     description:
-      "Migrated a single-PDF chatbot into a ReAct-based agentic RAG system on AWS Bedrock: 7 Lambda-backed knowledge bases, a FalkorDB code knowledge graph over 9 repositories, and an MCP server (40+ tools / 140+ skills) deployed on EKS.",
-    tags: ["Agentic RAG", "AWS Bedrock", "FalkorDB", "MCP"],
+      "A governed VS Code extension and custom Copilot and Claude Code agents used by 30+ teams, with 3 MCP servers into Jira, Confluence and GitHub Enterprise.",
+    tags: ["MCP", "VS Code Extension", "TypeScript"],
     href: "#experience",
   },
   {
     num: "04",
     name: "Arken-AI",
     description:
-      "Conversational AI platform that turns plain-English requirements into fully-audited heat-exchanger designs. Claude orchestration with a YAML tool registry drives a bounded 4-layer pipeline where deterministic math and hard engineering rules gate every model decision (proceed, correct, warn, escalate), streamed live to a React UI over Redis-Streams SSE.",
+      "Conversational AI platform that turns plain-English requirements into audited heat-exchanger designs. Claude tool calling with a YAML tool registry drives a bounded pipeline where deterministic math and hard engineering rules gate every model decision, streamed live to a React UI over Redis Streams SSE, plus an MCP server on the live engine. Team of 2.",
     tags: ["Agentic AI", "Tool Use", "FastAPI", "React/TS"],
     href: "https://github.com/Arken-AI",
   },
@@ -43,17 +43,9 @@ const projects: Project[] = [
     num: "05",
     name: "ZapBridge",
     description:
-      "Event-driven integration platform connecting GitHub to Slack. Webhook → HMAC-SHA256 validation → Redis idempotency → async RQ worker → Claude summarization agent → Slack. Production OAuth 2.0 with Fernet-encrypted tokens and key rotation.",
+      "Event-driven integration platform connecting GitHub to Slack. Webhook → HMAC-SHA256 validation → Redis idempotency → async RQ worker → Claude summarization → Slack. OAuth 2.0 with Fernet-encrypted tokens and key rotation.",
     tags: ["Event-Driven", "OAuth 2.0", "Redis/RQ", "Claude"],
     href: "https://github.com/akashnikam25/zapbridge",
-  },
-  {
-    num: "06",
-    name: "Personal Agent",
-    description:
-      "Your own personal AI agent: a self-hosted assistant that knows your context and acts on your behalf. Built with agentic patterns and MCP tooling.",
-    tags: ["Agents", "MCP", "Claude"],
-    href: "https://github.com/akashnikam25/personal-agent",
   },
 ];
 
@@ -64,8 +56,9 @@ export default function Projects() {
         <div className="section-tag">Projects</div>
         <h2 className="section-title">Things I&apos;ve built</h2>
         <p className="section-sub">
-          Production systems at John Deere, plus personal and open-source
-          work - agentic AI, RAG, and event-driven systems.
+          Three production systems at John Deere (described without
+          internal details), plus open-source work on agentic AI and
+          event-driven systems.
         </p>
         <div className="projects-grid">
           {projects.map((project) => (

@@ -26,9 +26,9 @@ export default function About() {
               The thing that drives me: <strong>I learn by building</strong>.
               When I want to understand something - OAuth and webhooks, RAG
               retrieval, bounded AI pipelines - I don&apos;t just read about it,
-              I ship a working version. That&apos;s where ZapBridge, ARKEN, and
-              PlantIQ came from: each one started as a question I couldn&apos;t
-              answer from a blog post.
+              I ship a working version. That&apos;s where ZapBridge and Arken came
+              from: each one started as a question I couldn&apos;t answer from
+              a blog post.
             </p>
             <p>
               I&apos;m allergic to hand-waving. I&apos;d rather say{" "}
@@ -46,7 +46,7 @@ export default function About() {
             </p>
             <div className="about-chips">
               <span className="chip">Pune, India</span>
-              <span className="chip">Open to remote</span>
+              <span className="chip">Open to remote and relocation</span>
               <span className="chip">AI Engineer</span>
               <span className="chip">Agentic Systems</span>
             </div>
