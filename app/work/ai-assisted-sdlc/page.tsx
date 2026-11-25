@@ -85,7 +85,7 @@ const decisions = [
   },
 ];
 
-const standards = ["Core standards", "React", "TypeScript", "Java / Spring Boot", "C# / .NET", "Playwright", "Cucumber"];
+const standards = ["Core standards", "Python / FastAPI", "TypeScript", "React", "Infrastructure (Docker, Kubernetes)"];
 
 const next = [
   { title: "Evaluate the agents themselves.", body: "A fixed set of tickets and repos, with plans and reviews scored against what senior engineers wrote." },
@@ -201,12 +201,12 @@ export default function AiAssistedSdlc() {
               </figure>
               <figure className="card transcript reveal" style={idx(1)}>
                 <figcaption className="kicker">Review agent, issue 1 of the commit</figcaption>
-                <p className="t-q">InvoiceService.java, lines 88–120</p>
+                <p className="t-q">app/workers/event_processor.py, lines 88–120</p>
                 <dl className="t-card">
                   <div><dt>Severity</dt><dd>Critical</dd></div>
-                  <div><dt>What</dt><dd>One method validates, writes and sends events</dd></div>
+                  <div><dt>What</dt><dd>One function validates the payload, writes to the database and sends the event</dd></div>
                   <div><dt>Why</dt><dd>Single responsibility rule in the core standards</dd></div>
-                  <div><dt>Fix</dt><dd>Split into three focused parts</dd></div>
+                  <div><dt>Fix</dt><dd>Split into three small functions</dd></div>
                 </dl>
                 <ol className="t-options inline">
                   <li>1 Refactor now</li>
