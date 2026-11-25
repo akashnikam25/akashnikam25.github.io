@@ -1011,3 +1011,99 @@ img {
     white-space: normal;
   }
 }
+
+/* Case study 03 */
+.agent-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+.agent {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.agent h3 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+}
+.agent p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--muted);
+}
+.agent-out {
+  margin-top: auto;
+  padding-top: 8px;
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--accent);
+}
+.transcript {
+  flex: 1 1 420px;
+  min-width: 0;
+  margin: 0;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+}
+.t-q {
+  margin: 0;
+  font-weight: 600;
+}
+.t-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.t-options li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--chip);
+}
+.t-options.inline {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.t-rec {
+  border-color: var(--accent) !important;
+  background: var(--accent-soft) !important;
+  color: #1e3a8a;
+}
+.t-rec span {
+  margin-left: 6px;
+  font-weight: 500;
+}
+.t-why {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+.t-card {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.t-card div {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 12px;
+}
+.t-card dt {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--muted);
+}
+.t-card dd {
+  margin: 0;
+}

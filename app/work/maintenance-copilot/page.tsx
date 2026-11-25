@@ -273,8 +273,8 @@ export default function MaintenanceCopilot() {
           </section>
 
           <div className="cs-foot">
-            <Link href="/work/developer-assistant/" className="text-link">
-              <span aria-hidden="true">←</span> Case study 01: multi-agent developer assistant
+            <Link href="/work/ai-assisted-sdlc/" className="text-link">
+              Case study 03: AI-assisted SDLC <span className="arrow" aria-hidden="true">→</span>
             </Link>
             <a href={`mailto:${LINKS.email}`} className="btn btn-primary">
               Talk about a similar system

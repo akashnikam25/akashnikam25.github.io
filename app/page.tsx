@@ -49,6 +49,7 @@ const work: Work[] = [
   },
   {
     kicker: "03 · Developer tools · 30+ teams",
+    href: "/work/ai-assisted-sdlc/",
     title: "AI-assisted SDLC",
     body: "A governed VS Code extension and custom Copilot and Claude Code agents that build context, plan work and review only the code that changed.",
     flowLabel: "Development flow",
