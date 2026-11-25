@@ -37,6 +37,7 @@ const work: Work[] = [
   {
     kicker: "02 · RAG · 30+ technicians",
     title: "Plant-maintenance RAG copilot",
+    href: "/work/maintenance-copilot/",
     body: "Grounded answers on shop-floor tablets from 500+ SOPs and 3,000+ work orders a year. It says “no approved procedure found” instead of guessing, because a wrong repair step costs more than a missing answer.",
     flowLabel: "Retrieval flow",
     flow: ["SOPs + work orders", "OCR + chunking", "Hybrid search", "Rerank", "Grounded answer"],

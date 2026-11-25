@@ -202,8 +202,8 @@ export default function CaseStudy() {
           </section>
 
           <div className="cs-foot">
-            <Link href="/#work" className="text-link">
-              <span aria-hidden="true">←</span> Back to all work
+            <Link href="/work/maintenance-copilot/" className="text-link">
+              Case study 02: plant-maintenance RAG copilot <span className="arrow" aria-hidden="true">→</span>
             </Link>
             <a href={`mailto:${LINKS.email}`} className="btn btn-primary">
               Talk about a similar system
