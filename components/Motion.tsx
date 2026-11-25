@@ -9,7 +9,7 @@ import { useEffect } from "react";
  */
 export default function Motion() {
   useEffect(() => {
-    const targets = document.querySelectorAll(".reveal, .flow, .pipeline, .delta");
+    const targets = document.querySelectorAll(".reveal, .flow, .pipeline, .delta, .hx-steps");
     if (!("IntersectionObserver" in window)) {
       targets.forEach((el) => el.classList.add("in"));
       return;

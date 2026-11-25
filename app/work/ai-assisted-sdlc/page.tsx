@@ -296,6 +296,9 @@ export default function AiAssistedSdlc() {
             <Link href="/work/maintenance-copilot/" className="text-link">
               <span aria-hidden="true">←</span> Case study 02: plant-maintenance RAG copilot
             </Link>
+            <Link href="/work/arken-ai/" className="text-link">
+              Open source: Arken AI <span className="arrow" aria-hidden="true">→</span>
+            </Link>
             <a href={`mailto:${LINKS.email}`} className="btn btn-primary">
               Talk about a similar system
             </a>

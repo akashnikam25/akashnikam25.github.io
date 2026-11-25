@@ -69,6 +69,7 @@ const oss = [
     body: "Turns plain-English requirements into audited heat-exchanger designs. Claude reviews each of 16 steps, but hard engineering rules always win. Live progress streams to a React UI, and an MCP server exposes the engine.",
     tags: ["Claude tool calling", "FastAPI", "Redis Streams", "React"],
     href: "https://github.com/Arken-AI",
+    caseStudy: "/work/arken-ai/",
   },
   {
     meta: "2026 · solo",
@@ -76,6 +77,7 @@ const oss = [
     body: "A GitHub-to-Slack event bridge: HMAC-verified webhooks, Redis idempotency so retries never double-post, a queue with a dead-letter window, and OAuth with encrypted tokens.",
     tags: ["Event-driven", "OAuth 2.0", "Redis + RQ", "Claude"],
     href: "https://github.com/akashnikam25/zapbridge",
+    caseStudy: undefined as string | undefined,
   },
 ];
 
@@ -208,9 +210,16 @@ export default function Home() {
                 <h3>{o.title}</h3>
                 <p>{o.body}</p>
                 <Tags items={o.tags} />
-                <a href={o.href} className="text-link ext" target="_blank" rel="noreferrer">
-                  View on GitHub <span className="arrow" aria-hidden="true">↗</span>
-                </a>
+                <div className="link-row">
+                  {o.caseStudy && (
+                    <Link href={o.caseStudy} className="text-link">
+                      Read the case study <span className="arrow" aria-hidden="true">→</span>
+                    </Link>
+                  )}
+                  <a href={o.href} className="text-link ext" target="_blank" rel="noreferrer">
+                    View on GitHub <span className="arrow" aria-hidden="true">↗</span>
+                  </a>
+                </div>
               </article>
             ))}
           </div>
